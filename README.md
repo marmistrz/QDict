@@ -1,6 +1,10 @@
 # QDict
 This is an open source Android dictionary application which support `stardict` format dictionaries.
 
+[<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
+     alt="Get it on F-Droid"
+     height="80">](https://f-droid.org/packages/com.annie.dictionary.fork/)
+
 ## Fork information
 This fork of [the original application](https://github.com/namndev/QDict) was created to incorporate patches,
 which were not responded to by the upstream and so as to make it possible to include the application in the [F-Droid repository](https://f-droid.org).
