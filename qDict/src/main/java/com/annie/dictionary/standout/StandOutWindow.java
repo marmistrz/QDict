@@ -578,9 +578,9 @@ public abstract class StandOutWindow extends Service {
         PendingIntent contentIntent = null;
 
         if (notificationIntent != null) {
+            // flag updates existing persistent notification
             contentIntent = PendingIntent.getActivity(this, 0, notificationIntent,
-                    // flag updates existing persistent notification
-                    Intent.FLAG_ACTIVITY_NEW_TASK);
+                PendingIntent.FLAG_UPDATE_CURRENT);
         }
         NotificationCompat.Builder compatBuilder = new NotificationCompat.Builder(this);
         compatBuilder.setSmallIcon(icon).setContentTitle(contentTitle).setContentText(contentText)
