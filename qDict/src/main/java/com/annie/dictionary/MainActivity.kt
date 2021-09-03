@@ -150,7 +150,7 @@ class MainActivity : BaseActivity(), NavigatorFragment.NavigationCallbacks, OnCl
         main_toolbar.title = null
         setSupportActionBar(main_toolbar)
         supportActionBar?.let {
-            it.setDefaultDisplayHomeAsUpEnabled(true)
+            it.setDisplayHomeAsUpEnabled(true)
             it.setHomeButtonEnabled(true)
         }
 
