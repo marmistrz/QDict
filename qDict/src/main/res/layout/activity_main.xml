@@ -29,15 +29,23 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/navi_header_height"
                 android:background="@drawable/bamboo"
-                app:layout_constraintTop_toTopOf="parent"
-                android:orientation="horizontal" />
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent" />
 
-            <FrameLayout
-                android:id="@+id/frame_container"
-                android:layout_width="match_parent"
+            <ScrollView
+                android:layout_width="0dp"
                 android:layout_height="0dp"
+                android:fillViewport="true"
                 app:layout_constraintBottom_toTopOf="@+id/layout_footer"
-                app:layout_constraintTop_toBottomOf="@+id/nav_header" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nav_header">
+
+                <FrameLayout
+                    android:id="@+id/frame_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp" />
+            </ScrollView>
 
             <LinearLayout
                 android:id="@+id/layout_footer"
