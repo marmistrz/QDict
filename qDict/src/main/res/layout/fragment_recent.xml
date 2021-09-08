@@ -22,7 +22,7 @@
             android:gravity="start|center_vertical"
             android:text="@string/recent_lable"
             android:textColor="@color/mmt_black"
-            android:textSize="28.0sp" />
+            android:textSize="28.0dp" />
 
         <com.mmt.widget.QTextView
             android:id="@+id/tv_count"
