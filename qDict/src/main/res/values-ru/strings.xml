@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="action_search">Поиск</string>
+
+    <!-- ui -->
+    <string name="sdcard_error">Ошибка карты памяти</string>
+    <string name="prefs_title_whatsnew" translatable="false">Что нового?</string>
+    <string name="prefs_title_help">Помощь</string>
+    <string name="prefs_title_feed_back">Обратная связь</string>
+    <string name="btn_more_apps">Ещё приложения</string>
+
+    <!-- action -->
+    <string name="ok">Да</string>
+    <string name="cancel">Отмена</string>
+    <string name="delete">Удалить</string>
+    <string name="checked_all">Выбрать всё</string>
+    <string name="unchecked_all">Сбросить всё</string>
+    <string name="hide">Скрыть</string>
+    <string name="close">Закрыть</string>
+    <string name="corner">Угол</string>
+    <string name="maximize">Развернуть</string>
+    <string name="delete_all">Удалить всё</string>
+    <string name="delete_all_recent_summary">Вы хотите удалить все недавние слова?</string>
+    <string name="delete_all_favorite_summary">Вы хотите удалить все избранные слова?</string>
+    <string name="delete_recent_summary">Вы хотите удалить эти недавние слова?</string>
+    <string name="delete_favorite_summary">Вы хотите удалить эти избранные слова?</string>
+    <string name="notification_message">Нажмите здесь для открытия QDict</string>
+    <string name="notification_title">%1$s запущен</string>
+    <!-- dicitonary -->
+    <plurals name="matches_found">
+        <item quantity="one">%d совпадение</item>
+        <item quantity="few">%d совпадения</item>
+        <item quantity="many">%d совпадений</item>
+    </plurals>
+    <plurals name="words_count">
+        <item quantity="one">%d ключевое слово</item>
+        <item quantity="few">%d ключевых слова</item>
+        <item quantity="many">%d ключевых слов</item>
+    </plurals>
+    <plurals name="items_count">
+        <item quantity="one">%d элемент</item>
+        <item quantity="few">%d элемента</item>
+        <item quantity="many">%d элеменов</item>
+    </plurals>
+
+    <string name="recent_lable">Недавнее</string>
+    <string name="favorite_lable">Избранное</string>
+    <string name="settings_lable">Настройки</string>
+    <string name="guide_lable">Гид</string>
+    <string name="select_dictionary">Выбор словаря</string>
+    <string name="join_us">Присоединиться</string>
+    <string name="share_lable">Поделиться</string>
+    <string name="about_lable">О приложении</string>
+    <string name="ftp_server">Открыть Mini-FTPServer</string>
+    <string name="keywords_null">Совпадений не найдено</string>
+    <string name="favorites_no_word">Нет избранных слов</string>
+    <string name="recent_no_word">Нет недавних слов</string>
+    <string name="dict_not_found">Нет доступных словарей.\n\nПожалуйста, добавьте словарь в папку \"%1$s\".\n\nВы можете использовать Mini-FTPServer для загрузки словарей на Ваше устройство.</string>
+    <!-- seaching -->
+    <string name="keywords_search">Поиск&#8230;</string>
+    <string name="fuzzy_query_prompt">Нажмите кнопку \"Список Слов\" для нечёткого поиска с ключевым словом выше.</string>
+    <string name="fulltext_query_prompt">Нажмите кнопку \"Список Слов\" для полнотекстового поиска с ключевым словом выше.</string>
+    <string name="pattern_query_prompt">Нажмите кнопку \"Список Слов\" для запроса \'шаблон\' с ключевым словом выше.</string>
+
+    <!-- voice -->
+    <string name="press_on_when_done">Нажмите иконку записи когда будете готовы!</string>
+    <!-- setting -->
+    <string name="prefs_category_title_general">Основные</string>
+    <string name="prefs_title_source">Данные</string>
+    <string name="prefs_title_tts">Озвучивать</string>
+    <string name="prefs_title_capture">Захват</string>
+    <string name="prefs_summary_capture">Поиск из буфера обмена</string>
+    <string name="prefs_title_notification">Уведомления</string>
+    <string name="prefs_title_notification_summary">Использование уведомлений для быстрого поиска</string>
+    <string name="prefs_title_tts_summary">Использование преобразования текста в речь</string>
+    <string name="prefs_category_title_theme">Оформление</string>
+    <!--  -->
+    <string name="prefs_title_font_text">Шрифт приложения</string>
+    <string name="prefs_title_max_favorite_word">Избранные слова</string>
+    <string name="prefs_title_max_favorite_word_summary">Максимальное число слов: %1$s</string>
+    <string name="prefs_title_theme">Темы</string>
+    <string name="prefs_title_languages">Язык</string>
+    <string name="msg_do_not_show_popup">Не показывать всплывающее окно с буфером обмена</string>
+    <!-- about -->
+    <string name="app_license">Apache, версия 2.0</string>
+    <string name="app_version_label">Версия: </string>
+    <string name="app_author_label">Автор: </string>
+    <string name="app_email_label">Почта: </string>
+    <string name="app_license_label">Лицензия: </string>
+    <string name="readme_text">
+1. Поиск по шаблону:&lt;br&gt;
+В качестве шаблона можно вводить строки, содержащие \"*\" (звёздочка) и \"?\" (вопрос). \"*\"
+соответствует произвольной, возможно пустой, строке, а \"?\" соответствует произвольному символу.
+После нажатия кнопки \"Список Слов\" слова, соответствующие данному шаблону, будут показаны в
+списке.
+
+&lt;p&gt;
+2. Нечёткий запрос:&lt;br&gt;
+Когда вы не можете вспомнить, как точно пишется слово, вы можете попробовать нечеткий запрос. Он
+использует &lt;i&gt;расстояние правки Левенштейна&lt;/i&gt; для вычисления сходства между двумя
+словами и выдает в результаты поиска слова, которые наиболее похожи на введенное вами слово.
+Чтобы создать нечеткий запрос, просто введите слово с началом  \"/\", а затем нажмите кнопку
+\"Список Слов\".
+
+&lt;p&gt;
+3. Полнотекстовый поиск:&lt;br&gt;
+Полнотекстовый поиск ищет слово в словарях. Чтобы создать полнотекстовый поиск, просто введите
+перед словом \":\", а затем нажмите кнопку \"Список Слов\". Например, \":аб вг\" ищет данные,
+которые содержат \'аб\' и \'вг\'. Если слова содержат символ пробела, вы можете использовать
+\"\\ \", например \":яблоко\\ пирог\". Другие экранирующие символы \"\\\\\" для \'\\\', \"\\t\"
+для табуляции и \"\\n\" для новой строки.
+
+&lt;p&gt;
+Больше информации в \"User Guide\":&lt;br&gt;
+&lt;a href=http://madman-team.blogspot.com/2015/05/qdict-guide.html target=_blank>http://madman-team.blogspot.com&lt;/a&gt;
+    </string>
+
+</resources>

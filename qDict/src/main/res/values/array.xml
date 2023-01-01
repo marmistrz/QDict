@@ -50,6 +50,7 @@
     <string-array name="language_values" translatable="false">
         <item>en</item>
         <item>es</item>
+        <item>ru</item>
         <item>vi</item>
         <item>zh_CN</item>
         <item>zh_TW</item>
@@ -57,6 +58,7 @@
     <string-array name="languages" translatable="false">
         <item>English</item>
         <item>Español</item>
+        <item>Русский</item>
         <item>Tiếng Việt</item>
         <item>中文</item>
         <item>台灣</item>
