@@ -31,7 +31,7 @@
     <string name="delete_favorite_summary">Do you want to delete favorite words?</string>
     <string name="notification_message">Tap here to open QDict</string>
     <string name="notification_title">%1$s is running</string>
-    <!-- dicitonary -->
+    <!-- dictionary -->
     <plurals name="matches_found">
         <item quantity="zero">No matches</item>
         <item quantity="one">1 match</item>
@@ -62,7 +62,7 @@
     <string name="favorites_no_word">Don\'t have any favorite word</string>
     <string name="recent_no_word">Don\'t have any recent word</string>
     <string name="dict_not_found">No dictionary available.\n\nPlease add dictionary into \'%1$s\' directory.\n\nYou can use the Mini-FTPServer software to push data dictionary to your device.</string>
-    <!-- seaching -->
+    <!-- searching -->
     <string name="keywords_search">Searching&#8230;</string>
     <string name="fuzzy_query_prompt">Press \'wordlist\' button to \'fuzzy\' query with keyword above.</string>
     <string name="fulltext_query_prompt">Press \'wordlist\' button to \'Full-text\' search with keyword above.</string>
