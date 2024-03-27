@@ -28,7 +28,7 @@
     <plurals name="items_count">
         <item quantity="other"><xliff:g example="135" id="number">%d</xliff:g> mục</item>
     </plurals>
-    <!-- dicitonary -->
+    <!-- dictionary -->
 
     <string name="recent_lable">Lịch sử</string>
     <string name="favorite_lable">Yêu thích</string>
@@ -44,7 +44,7 @@
     <string name="notification_message">Chạm vào để mở QDict</string>
     <string name="notification_title">%1$s đang chạy</string>
 
-    <!-- seaching -->
+    <!-- searching -->
     <string name="keywords_search">Tìm kiếm&#8230;</string>
     <string name="fuzzy_query_prompt">Chọn nút \'wordlist\' để thực hiện truy vấn \'Fuzzy\' với từ khóa trên.</string>
     <string name="fulltext_query_prompt">Chọn nút \'wordlist\' để tìm kiếm \'Full-text\' với đoạn từ khóa trên.</string>

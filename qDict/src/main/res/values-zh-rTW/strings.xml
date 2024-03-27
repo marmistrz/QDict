@@ -21,7 +21,7 @@
     <string name="maximize">最大化</string>
     <string name="delete_all_recent_summary">你想刪除所有近期的話？</string>
     <string name="delete_all_favorite_summary">你想删除所有最喜欢的话？</string>
-    <!-- dicitonary -->
+    <!-- dictionary -->
 
     <string name="recent_lable">歷史記錄</string>
     <string name="favorite_lable">喜愛</string>
@@ -43,7 +43,7 @@
     <plurals name="items_count">
         <item quantity="other"><xliff:g example="137" id="number">%d</xliff:g> 項目</item>
     </plurals>
-    <!-- seaching -->
+    <!-- searching -->
     <string name="keywords_search">查詢中&#8230;</string>
     <string name="fuzzy_query_prompt">按下單詞列表按鈕進行模糊查詢。</string>
     <string name="fulltext_query_prompt">按下單詞列表按鈕進行全文檢索。</string>

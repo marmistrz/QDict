@@ -27,7 +27,7 @@
     <string name="delete_favorite_summary">Вы хотите удалить эти избранные слова?</string>
     <string name="notification_message">Нажмите здесь для открытия QDict</string>
     <string name="notification_title">%1$s запущен</string>
-    <!-- dicitonary -->
+    <!-- dictionary -->
     <plurals name="matches_found">
         <item quantity="one">%d совпадение</item>
         <item quantity="few">%d совпадения</item>
@@ -56,8 +56,8 @@
     <string name="keywords_null">Совпадений не найдено</string>
     <string name="favorites_no_word">Нет избранных слов</string>
     <string name="recent_no_word">Нет недавних слов</string>
-    <string name="dict_not_found">Нет доступных словарей.\n\nПожалуйста, добавьте словарь в папку \"%1$s\".\n\nВы можете использовать Mini-FTPServer для загрузки словарей на Ваше устройство.</string>
-    <!-- seaching -->
+    <string name="dict_not_found">Нет доступных словарей.\n\nПожалуйста, добавьте словарь в папку \"%1$s\".\n\nВы можете использовать Mini-FTPServer для загрузки словарей на ваше устройство.</string>
+    <!-- searching -->
     <string name="keywords_search">Поиск&#8230;</string>
     <string name="fuzzy_query_prompt">Нажмите кнопку \"Список Слов\" для нечёткого поиска с ключевым словом выше.</string>
     <string name="fulltext_query_prompt">Нажмите кнопку \"Список Слов\" для полнотекстового поиска с ключевым словом выше.</string>

@@ -19,7 +19,7 @@
     <string name="close">关闭</string>
     <string name="corner">角落</string>
     <string name="maximize">最大化</string>
-    <!-- dicitonary -->
+    <!-- dictionary -->
 
     <string name="recent_lable">历史记录</string>
     <string name="favorite_lable">喜爱</string>
@@ -36,7 +36,7 @@
     <string name="notification_title">%1$s 正在运行</string>
     <string name="delete_all_recent_summary">你想删除所有近期的话？</string>
     <string name="delete_all_favorite_summary">你想删除所有最喜欢的话？</string>
-    <!-- seaching -->
+    <!-- searching -->
     <string name="keywords_search">查询中&#8230;</string>
     <string name="fuzzy_query_prompt">按下单词列表按钮进行模糊查询。</string>
     <string name="fulltext_query_prompt">按下单词列表按钮进行全文检索。</string>

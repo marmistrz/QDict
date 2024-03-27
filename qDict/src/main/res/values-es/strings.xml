@@ -24,7 +24,7 @@
     <string name="delete_all_favorite_summary">Quieres borrar todas las palabras favoritas?</string>
     <string name="notification_message">Aprovechar aquí para abrir QDict</string>
     <string name="notification_title">%1$s está en ejecución</string>
-    <!-- dicitonary -->
+    <!-- dictionary -->
     <plurals name="matches_found">
         <item quantity="one">1 coincidencia</item>
         <item quantity="other"><xliff:g example="137" id="number">%d</xliff:g> coincidencias</item>
@@ -51,7 +51,7 @@
     <string name="favorites_no_word">No tengo ninguna palabra favorita</string>
     <string name="recent_no_word">No tengo ninguna palabra reciente</string>
     <string name="dict_not_found">No diccionario disponible.\n\nPor favor, añade los diccionarios a \'%1$s\' directorio.\n\nPuedes usar el Mini-FTPServer para copiar los diccionarios a tu dispositivo.</string>
-    <!-- seaching -->
+    <!-- searching -->
     <string name="keywords_search">Búsqueda&#8230;</string>
     <string name="fuzzy_query_prompt">Presionar \'wordlist\' botón para \'fuzzy\' query con la palabra clave arriba.</string>
     <string name="fulltext_query_prompt">Presionar \'wordlist\' botón para \'Full-text\' search con la palabra clave arriba.</string>
