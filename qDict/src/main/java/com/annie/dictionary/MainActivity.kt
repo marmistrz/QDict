@@ -138,6 +138,26 @@ class MainActivity : BaseActivity(), NavigatorFragment.NavigationCallbacks, OnCl
             showSearchContent()
         }
     }
+    private fun extractKeyword(intent: Intent?): String? {
+        return when (intent?.action) {
+            Intent.ACTION_SEND -> intent.getStringExtra(Intent.EXTRA_TEXT)
+            ACTION_LOOKUP -> intent.getStringExtra("KEYWORD")
+            ACTION_GOLDENDICT -> intent.getStringExtra("EXTRA_QUERY")
+            ACTION_COLORDICT -> intent.getStringExtra("EXTRA_QUERY")
+            else -> null
+        }?.takeIf { it.isNotBlank() }
+    }
+
+    private fun handleLookupIntent(intent: Intent?) {
+        val keyword = extractKeyword(intent)
+
+        if (keyword != null) {
+            mDictKeywordView?.setText(keyword)
+            showSearchContent()
+        } else {
+            Log.w("MainActivity", "Warning: Received empty/blank value in handleLookupIntent")
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -217,6 +237,12 @@ class MainActivity : BaseActivity(), NavigatorFragment.NavigationCallbacks, OnCl
 
         startService()
         registerReceiver(mUIReceiver, IntentFilter(ACTION_UPDATE_UI))
+        Handler().post { handleLookupIntent(intent) }
+    }
+
+    override fun onNewIntent(intent: Intent?) {
+        super.onNewIntent(intent)
+        handleLookupIntent(intent)
     }
 
     override fun onRequestPermissionResult(requestCode: Int, isSucess: Boolean) {
@@ -692,6 +718,9 @@ class MainActivity : BaseActivity(), NavigatorFragment.NavigationCallbacks, OnCl
         const val ACTION_UPDATE_UI = "com.annie.dictionary.ACTION_UPDATE_UI"
 
         const val ACTION_UPDATE_KEY = "receiver_update_ui"
+        const val ACTION_LOOKUP = "com.annie.dictionary.action.LOOKUP"
+        const val ACTION_GOLDENDICT = "goldendict.intent.action.SEARCH"
+        const val ACTION_COLORDICT = "colordict.intent.action.SEARCH"
         // const
         const val REQUEST_CODE = 101
         const val POPUPWORDSLIST_TIMER = 200
