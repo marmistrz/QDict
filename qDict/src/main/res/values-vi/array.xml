@@ -14,6 +14,8 @@
     <string-array name="themes_lables">
         <item>Màu cam (Mặc định)</item>
         <item>Màu xanh sáng</item>
+        <item>Màu cam tối</item>
+        <item>Màu xanh tối</item>
     </string-array>
 
 </resources>

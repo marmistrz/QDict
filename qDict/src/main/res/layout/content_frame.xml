@@ -27,7 +27,7 @@
                 android:id="@+id/main_toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="@color/mmt_white"
+                 android:background="?attr/colorBackground"
                 android:fitsSystemWindows="true"
                 app:theme="@style/ActionBar" />
 

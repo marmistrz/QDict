@@ -85,9 +85,9 @@ public class QDictService extends StandOutWindow {
             bHasLoadDict = true;
             mQDictions.initDicts();
         }
-        String htmlContent = mQDictions.generateHtmlContent(word);
+        String htmlContent = mQDictions.generateHtmlContent(word, getApplicationContext());
         if (mDictViewContent != null)
-            QDictions.showHtmlContent(htmlContent, mDictViewContent);
+            QDictions.showHtmlContent(htmlContent, mDictViewContent, getApplicationContext());
     }
 
     private void setKeywordLable(String word) {

@@ -12,6 +12,9 @@
     <attr name="icon_folder_back" format="reference" />
     <attr name="icon_file" format="reference" />
 
+    <attr name="colorBackground" format="color" />
+    <attr name="colorOnSurface" format="color" />
+
     <declare-styleable name="SlidingUpPanelLayout">
         <attr name="umanoPanelHeight" format="dimension" />
         <attr name="umanoShadowHeight" format="dimension" />

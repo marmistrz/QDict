@@ -234,6 +234,22 @@ public class Utils {
                 else if (themeActivity == ThemeActivity.DIALOG)
                     activity.setTheme(R.style.QDialog_Blue);
                 break;
+            case 2:
+                if (themeActivity == ThemeActivity.HOME)
+                    activity.setTheme(R.style.AppOrangeDarkTheme);
+                else if (themeActivity == ThemeActivity.SETTING)
+                    activity.setTheme(R.style.AppOrangeDarkThemeWithActionBar);
+                else if (themeActivity == ThemeActivity.DIALOG)
+                    activity.setTheme(R.style.QDialog_OrangeDark);
+                break;
+            case 3:
+                if (themeActivity == ThemeActivity.HOME)
+                    activity.setTheme(R.style.AppBlueDarkTheme);
+                else if (themeActivity == ThemeActivity.SETTING)
+                    activity.setTheme(R.style.AppBlueDarkThemeWithActionBar);
+                else if (themeActivity == ThemeActivity.DIALOG)
+                    activity.setTheme(R.style.QDialog_BlueDark);
+                break;
             default:
                 if (themeActivity == ThemeActivity.HOME)
                     activity.setTheme(R.style.AppOrangeTheme);

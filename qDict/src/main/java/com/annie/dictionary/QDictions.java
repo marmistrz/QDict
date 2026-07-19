@@ -35,8 +35,16 @@ public class QDictions {
         mQDictEng = QDictEng.createQDictEng();
     }
 
-    public static String getTextHtmlColor() {
-        return "#" + Def.DEFAULT_TEXT_COLOR.substring(3);
+    public static String getTextHtmlColor(Context context) {
+        if (context == null) return "#000000";
+        int color = Utils.getColor(context, R.attr.colorOnSurface);
+        return String.format("#%06X", 0xFFFFFF & color);
+    }
+
+    public static String getBackgroundHtmlColor(Context context) {
+        if (context == null) return "#FFFFFF";
+        int color = Utils.getColor(context, R.attr.colorBackground);
+        return String.format("#%06X", 0xFFFFFF & color);
     }
 
     public static String getWordHtmlColor() {
@@ -46,7 +54,8 @@ public class QDictions {
     public static String getReadmeHtml(Context context, SharedPreferences shares) {
         // CharSequence content = Utils.getTextFromAssets(mContext, "help.txt");
         String content = context.getResources().getString(R.string.readme_text);
-        String textColor = getTextHtmlColor();
+        String textColor = getTextHtmlColor(context);
+        String backgroundColor = getBackgroundHtmlColor(context);
         String wordColor = getWordHtmlColor();
         String font = shares.getString(Def.PREF_KEY_FONT, Def.DEFAULT_FONT);
         String head = "<head><style>@font-face {font-family:'Unicode';src:url('file:///android_asset/fonts/" + font
@@ -54,17 +63,18 @@ public class QDictions {
         head += "@font-face {font-family:'KPhonetic';src:url('file:///android_asset/fonts/KPhonetic.ttf');}";
         head += " body,font{font-family:'Unicode';} i,b{font-family: sans-serif;}</style></head>";
 
-        String html = "<html>" + head + "<body style='color:" + textColor + "'>" + content + "</body></html>";
+        String html = "<html>" + head + "<body style='color:" + textColor + "; background-color:" + backgroundColor + "'>" + content + "</body></html>";
 
         html = html.replace("color:#TOBEREPLACE;", "color:" + wordColor + ";");
+        Log.d("TEXT_COLOR_H", html);
         return html;
 
     }
 
-    public static void showHtmlContent(String content, WebView webView) {
+    public static void showHtmlContent(String content, WebView webView, Context context) {
         if (webView != null) {
             if (!content.contains("<body style='color:")) {
-                content = "<body style='color:" + getTextHtmlColor() + "'>" + content + "</body>";
+                content = "<body style='color:" + getTextHtmlColor(context) + "; background-color:" + getBackgroundHtmlColor(context) + "'>" + content + "</body>";
             }
             try {
                 webView.loadDataWithBaseURL(null, content, Def.MIME_TYPE, Def.HTML_ENCODING, null);
@@ -298,16 +308,17 @@ public class QDictions {
         return sb.toString();
     }
 
-    public String generateHtmlContent(String word) {
+    public String generateHtmlContent(String word, Context context) {
+        SharedPreferences shares = context.getSharedPreferences(Def.APP_NAME, Context.MODE_PRIVATE);
         String html;
         String dictHtmlData = "";
         String dictCheckeds;
 
         String strWordsArray[] = lookupWord(word);
         if (null == strWordsArray)
-            return mContext.get().getResources().getString(R.string.keywords_null);
+            return context.getResources().getString(R.string.keywords_null);
 
-        dictCheckeds = mSharedPrefs.getString(Def.PREF_INDEX_CHECKED, mEmptyList);
+        dictCheckeds = shares.getString(Def.PREF_INDEX_CHECKED, mEmptyList);
 
         String[] dictCheckedArrays = dictCheckeds.split(";");
         // This is for dictionary order.
@@ -326,7 +337,7 @@ public class QDictions {
                 strDictName = "<div onclick=\"javascript:var obj=document.getElementById('" + strDictID
                         + "');if(obj.innerHTML==''){obj.innerHTML=" + strDictID + ";}else{" + strDictID
                         + "=obj.innerHTML;obj.innerHTML='';}\">" + strDictName + "</div>";
-                int backgBorder = Utils.getColor(mContext.get(), R.attr.colorPrimary);
+                int backgBorder = Utils.getColor(context, R.attr.colorPrimary);
                 String strColor = String.format("#%06X", 0xFFFFFF & backgBorder);
                 // Change the style of dictionary name.
                 strDictName = "<TABLE border=0 cellSpacing=0 cellPadding=0><TR><TD style=\"PADDING-LEFT:6px;PADDING-RIGHT:6px;BORDER-BOTTOM:#92b0dd 1px solid;"
@@ -363,17 +374,18 @@ public class QDictions {
                 dictHtmlData += dictContent;
         }
         if (TextUtils.isEmpty(dictHtmlData)) {
-            return mContext.get().getResources().getString(R.string.keywords_null);
+            return context.getResources().getString(R.string.keywords_null);
         }
 
-        String textColor = getTextHtmlColor();
+        String textColor = getTextHtmlColor(context);
+        String backgroundColor = getBackgroundHtmlColor(context);
         String wordColor = getWordHtmlColor();
-        String font = mSharedPrefs.getString(Def.PREF_KEY_FONT, Def.DEFAULT_FONT);
+        String font = shares.getString(Def.PREF_KEY_FONT, Def.DEFAULT_FONT);
         String head = "<head><style>@font-face {font-family:'Unicode';src:url('file:///android_asset/fonts/" + font
                 + "');}";
         head += "@font-face {font-family:'KPhonetic';src:url('file:///android_asset/fonts/KPhonetic.ttf');}";
         head += " body,font{font-family:'Unicode';} i,b{font-family: sans-serif;}</style></head>";
-        html = "<html>" + head + "<body style='color:" + textColor + "'>" + dictHtmlData + "</body></html>";
+        html = "<html>" + head + "<body style='color:" + textColor + "; background-color:" + backgroundColor + "'>" + dictHtmlData + "</body></html>";
         html = html.replace("color:#TOBEREPLACE;", "color:" + wordColor + ";");
         return html;
     }

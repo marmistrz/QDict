@@ -109,8 +109,8 @@ public class SearchFragment extends Fragment {
     private void makeDictContent(String word) {
         mTvKeyword.setText(word);
         mSpeakBtn.setVisibility(mTts ? View.VISIBLE : View.GONE);
-        String htmlContent = mDictions.generateHtmlContent(word);
-        QDictions.showHtmlContent(htmlContent, mDictContentView);
+        String htmlContent = mDictions.generateHtmlContent(word, getActivity());
+        QDictions.showHtmlContent(htmlContent, mDictContentView, getActivity());
         if (null != word && word.length() > 0) {
             if (!mBackClick)
                 mWordsFileUtilsHis.addWord(word);
@@ -122,15 +122,15 @@ public class SearchFragment extends Fragment {
 
     private void showSearchContent() {
         if (mKeyword.length() <= 0) {
-            QDictions.showHtmlContent(mReadmeHtml, mDictContentView);
+            QDictions.showHtmlContent(mReadmeHtml, mDictContentView, getActivity());
             mDictBackBtn.setVisibility(View.INVISIBLE);
             mSpeakBtn.setVisibility(View.GONE);
         } else if (mKeyword.charAt(0) == '/') {
-            QDictions.showHtmlContent(getResources().getString(R.string.fuzzy_query_prompt), mDictContentView);
+            QDictions.showHtmlContent(getResources().getString(R.string.fuzzy_query_prompt), mDictContentView, getActivity());
         } else if (mKeyword.charAt(0) == ':') {
-            QDictions.showHtmlContent(getResources().getString(R.string.fulltext_query_prompt), mDictContentView);
+            QDictions.showHtmlContent(getResources().getString(R.string.fulltext_query_prompt), mDictContentView, getActivity());
         } else if ((mKeyword.indexOf('*') >= 0) || (mKeyword.indexOf('?') >= 0)) {
-            QDictions.showHtmlContent(getResources().getString(R.string.pattern_query_prompt), mDictContentView);
+            QDictions.showHtmlContent(getResources().getString(R.string.pattern_query_prompt), mDictContentView, getActivity());
         } else {
             makeDictContent(mKeyword);
         }
@@ -200,7 +200,7 @@ public class SearchFragment extends Fragment {
         if (mIsSearch) {
             showSearchContent();
         } else {
-            QDictions.showHtmlContent(mReadmeHtml, mDictContentView);
+            QDictions.showHtmlContent(mReadmeHtml, mDictContentView, getActivity());
             mDictBackBtn.setVisibility(View.INVISIBLE);
             mSpeakBtn.setVisibility(View.GONE);
         }

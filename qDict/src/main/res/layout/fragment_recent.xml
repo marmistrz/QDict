@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/mmt_white">
+    android:background="?attr/colorBackground">
 
     <RelativeLayout
         android:id="@+id/layout_title"
@@ -21,7 +21,7 @@
             android:layout_marginStart="@dimen/super_padding"
             android:gravity="start|center_vertical"
             android:text="@string/recent_lable"
-            android:textColor="@color/mmt_black"
+            android:textColor="?attr/colorOnSurface"
             android:textSize="28.0dp" />
 
         <com.mmt.widget.QTextView
@@ -47,7 +47,7 @@
         android:gravity="center"
         android:paddingBottom="?attr/actionBarSize"
         android:text="@string/recent_no_word"
-        android:textColor="@color/mmt_black"
+        android:textColor="?attr/colorOnSurface"
         android:textSize="16.0sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"

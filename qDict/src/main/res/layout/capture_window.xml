@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/mmt_white"
+                android:background="?attr/colorBackground"
                 android:orientation="vertical">
 
     <RelativeLayout
@@ -17,7 +17,7 @@
             android:layout_marginLeft="@dimen/small_padding"
             android:layout_toLeftOf="@+id/action_speak"
             android:gravity="left|center_vertical"
-            android:textColor="@color/mmt_black"
+            android:textColor="?attr/colorOnSurface"
             android:textSize="23.0sp"/>
 
         <ImageButton

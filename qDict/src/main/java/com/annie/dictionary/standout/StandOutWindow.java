@@ -1,9 +1,11 @@
 package com.annie.dictionary.standout;
 
 import android.app.Notification;
+import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.Service;
+import android.os.Build;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -320,6 +322,22 @@ public abstract class StandOutWindow extends Service {
         mLayoutInflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         sThemeIndex = mSharedPreferences.getInt("prefs_key_theme", 0);
         startedForeground = false;
+        createNotificationChannel();
+    }
+
+    private void createNotificationChannel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            String channelId = "standout_channel";
+            String channelName = "StandOut Window";
+            NotificationChannel channel = new NotificationChannel(channelId, channelName, NotificationManager.IMPORTANCE_LOW);
+            channel.setShowBadge(false);
+            channel.enableVibration(false);
+            channel.setLockscreenVisibility(NotificationCompat.VISIBILITY_SECRET);
+            NotificationManager manager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+            if (manager != null) {
+                manager.createNotificationChannel(channel);
+            }
+        }
     }
 
     public abstract void initClipboardService();
@@ -582,7 +600,7 @@ public abstract class StandOutWindow extends Service {
             contentIntent = PendingIntent.getActivity(this, 0, notificationIntent,
                 PendingIntent.FLAG_UPDATE_CURRENT);
         }
-        NotificationCompat.Builder compatBuilder = new NotificationCompat.Builder(this);
+        NotificationCompat.Builder compatBuilder = new NotificationCompat.Builder(this, "standout_channel");
         compatBuilder.setSmallIcon(icon).setContentTitle(contentTitle).setContentText(contentText)
                 .setContentIntent(contentIntent).setWhen(when).setTicker(tickerText);
         return compatBuilder.build();
@@ -628,10 +646,18 @@ public abstract class StandOutWindow extends Service {
      * @return The theme to set on the window, or 0 for device default.
      */
     public int getThemeStyle() {
-        if (sThemeIndex == 0)
-            return R.style.AppOrangeTheme;
-        else
-            return R.style.AppBlueLightTheme;
+        switch (sThemeIndex) {
+            case 0:
+                return R.style.AppOrangeTheme;
+            case 1:
+                return R.style.AppBlueLightTheme;
+            case 2:
+                return R.style.AppOrangeDarkTheme;
+            case 3:
+                return R.style.AppBlueDarkTheme;
+            default:
+                return R.style.AppOrangeTheme;
+        }
     }
 
     public EditText getSearchEdt(final int id) {

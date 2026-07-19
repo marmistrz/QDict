@@ -36,10 +36,14 @@
     <string-array name="themes_lables">
         <item>Orange (Default)</item>
         <item>Blue light</item>
+        <item>Orange Dark</item>
+        <item>Blue Dark</item>
     </string-array>
     <string-array name="themes_values" translatable="false">
         <item>0</item>
         <item>1</item>
+        <item>2</item>
+        <item>3</item>
     </string-array>
     <string-array name="max_recent_words" translatable="false">
         <item>100</item>

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="320dp"
     android:layout_height="480dp"
+    android:background="?attr/colorBackground"
     android:orientation="vertical">
 
     <com.mmt.widget.QTextView
@@ -35,8 +37,7 @@
             android:layout_marginEnd="8dp"
             android:layout_weight="1"
             android:padding="16dp"
-            android:text="@string/cancel"
-            android:textColor="@color/mmt_black" />
+            android:text="@string/cancel" />
 
         <com.mmt.widget.QButton
             android:id="@+id/buttonConfirm"
@@ -46,8 +47,7 @@
             android:layout_marginEnd="16dp"
             android:layout_weight="1"
             android:padding="16dp"
-            android:text="@string/ok"
-            android:textColor="@color/mmt_black" />
+            android:text="@string/ok" />
 
     </LinearLayout>
 </LinearLayout>

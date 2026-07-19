@@ -22,7 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:gravity="center_vertical">
-        </com.mmt.widget.QTextView>
+            android:gravity="center_vertical"
+            android:textColor="?attr/colorOnSurface"></com.mmt.widget.QTextView>
     </LinearLayout>
 </LinearLayout>

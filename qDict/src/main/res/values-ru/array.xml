@@ -14,6 +14,8 @@
     <string-array name="themes_lables">
         <item>Оранжевая (по умолчанию)</item>
         <item>Голубая светлая</item>
+        <item>Оранжевая тёмная</item>
+        <item>Голубая тёмная</item>
     </string-array>
 
 </resources>

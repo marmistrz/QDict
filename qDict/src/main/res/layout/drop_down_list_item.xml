@@ -22,7 +22,7 @@
         android:layout_margin="4dp"
         android:text="Description"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@color/mmt_black"
+        android:textColor="?attr/colorOnSurface"
         tools:ignore="HardcodedText"/>
 
 </LinearLayout>
